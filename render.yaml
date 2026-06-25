@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: cama-ocean-scraper
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: GEMH_KEY
+        value: gpajEUg9mdTnlIz17DkQEgi4XtNqgHA4
+      - key: PYTHON_VERSION
+        value: 3.11.0
