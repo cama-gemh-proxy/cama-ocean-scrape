@@ -16,13 +16,14 @@ app = Flask(__name__)
 CORS(app)
 
 GEMH_KEY  = os.environ.get("GEMH_KEY", "gpajEUg9mdTnlIz17DkQEgi4XtNqgHA4")
-GEMH_BASE = "https://opendata-api.businessportal.gr/opendata"
+GEMH_BASE = BASE_URL  = "https://opendata-api.businessportal.gr/api/opendata/v1"
 PORTAL    = "https://publicity.businessportal.gr"
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "el-GR,el;q=0.9,en;q=0.8",
+    HEADERS = {
+    "Accept": "application/json",
+    "api-key": GEMH_KEY
+}
 }
 
 # ── Cache in-memory ────────────────────────────────────
