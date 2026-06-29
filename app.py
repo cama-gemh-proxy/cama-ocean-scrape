@@ -31,11 +31,11 @@ def health():
 @app.route("/company/afm/<afm>")
 def company_by_afm(afm):
     try:
-        params = {"afmGemi": afm, "size": 1}
+        params = {"afmGemi": afm, "size": 5}
         r = requests.get(f"{BASE_URL}/companies", headers=HEADERS, params=params, timeout=12)
         if r.ok:
             data = r.json()
-            items = data if isinstance(data, list) else data.get("data") or data.get("results") or []
+          items = data.get("searchResults") or data.get("data") or data.get("results") or []
             if items:
                 return jsonify({"ok": True, "afm": afm, "data": items[0]})
         return jsonify({"ok": False, "afm": afm, "status": r.status_code, "error": r.text[:300]}), 404
