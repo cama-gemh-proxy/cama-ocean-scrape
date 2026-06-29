@@ -19,7 +19,6 @@ GEMH_KEY  = os.environ.get("GEMH_KEY", "gpajEUg9mdTnlIz17DkQEgi4XtNqgHA4")
 GEMH_BASE = BASE_URL  = "https://opendata-api.businessportal.gr/api/opendata/v1"
 PORTAL    = "https://publicity.businessportal.gr"
 
-
     HEADERS = {
     "Accept": "application/json",
     "api-key": GEMH_KEY
