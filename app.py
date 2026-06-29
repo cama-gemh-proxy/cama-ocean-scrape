@@ -4,7 +4,7 @@ import requests, os, time
 from datetime import datetime
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins="*", allow_headers="*", methods=["GET","POST","OPTIONS"])
 
 GEMH_KEY = os.environ.get("GEMH_KEY", "gpajEUg9mdTnlIz17DkQEgi4XtNqgHA4")
 BASE_URL = "https://opendata-api.businessportal.gr/api/opendata/v1"
