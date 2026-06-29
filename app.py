@@ -24,7 +24,6 @@ HEADERS = {
     "Accept": "application/json",
     "api-key": GEMH_KEY
 }
-}
 
 # ── Cache in-memory ────────────────────────────────────
 cache = {}  # {kad: {timestamp, leads: []}}
