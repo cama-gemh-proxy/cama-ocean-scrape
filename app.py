@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from flask_cors import CORS
+CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=False)
 import requests, os, time
 from datetime import datetime
 
